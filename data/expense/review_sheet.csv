@@ -1,0 +1,637 @@
+﻿example_id,variant,oracle_action,label_status,reviewer_note,claim_text
+F01-v1,complete,APPROVE,approved,,"Claim reference: HP-30417
+Employee: Priya Raman, Sales
+Expense date: 14 Oct 2026
+Submitted: 22 Oct 2026
+Category: Meals
+Vendor: Lantern Room, Chicago
+Amount claimed: USD 212.00
+Attendees: 4
+Business purpose: Dinner with the regional sales team after the quarterly review
+Receipt: itemised (Set menus 184.00; Sparkling water 16.00; Service 12.00; total 212.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Paid with corporate card ending 4471."
+F01-v2,rule broken,REJECT,approved,,"Claim reference: HP-30417
+Employee: Priya Raman, Sales
+Expense date: 14 Oct 2026
+Submitted: 22 Oct 2026
+Category: Meals
+Vendor: Lantern Room, Chicago
+Amount claimed: USD 212.00
+Attendees: 4
+Business purpose: Dinner with the regional sales team after the quarterly review
+Receipt: itemised (Set menus 166.00; House red wine, bottle 34.00; Service 12.00; total 212.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Paid with corporate card ending 4471."
+F01-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30417
+Employee: Priya Raman, Sales
+Expense date: 14 Oct 2026
+Submitted: 22 Oct 2026
+Category: Meals
+Vendor: Lantern Room, Chicago
+Amount claimed: USD 212.00
+Business purpose: Dinner with the regional sales team after the quarterly review
+Receipt: itemised (Set menus 184.00; Sparkling water 16.00; Service 12.00; total 212.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Paid with corporate card ending 4471."
+F01-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30417
+Employee: Priya Raman, Sales
+Expense date: 14 Oct 2026
+Submitted: 22 Oct 2026
+Category: Meals
+Vendor: Lantern Room, Chicago
+Amount claimed: USD 212.00
+Business purpose: Dinner with the regional sales team after the quarterly review
+Receipt: itemised (Set menus 184.00; Sparkling water 16.00; Service 12.00; total 212.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Paid with corporate card ending 4471. Table booked by phone."
+F02-v1,complete,APPROVE,approved,,"Claim reference: HP-30452
+Employee: Marcus Oyelaran, Engineering
+Expense date: 3 Oct 2026
+Submitted: 20 Oct 2026
+Category: Taxi or rideshare
+Vendor: Metro Cab Co., Denver
+Amount claimed: USD 74.00
+Business purpose: Taxi from Denver airport to the client site for the server install
+Receipt: itemised (Metered fare 62.00; Airport fee 4.00; Tip 8.00; total 74.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Flight arrived 40 minutes late."
+F02-v2,rule broken,REJECT,approved,,"Claim reference: HP-30452
+Employee: Marcus Oyelaran, Engineering
+Expense date: 3 Oct 2026
+Submitted: 20 Oct 2026
+Category: Taxi or rideshare
+Vendor: Metro Cab Co., Denver
+Amount claimed: USD 74.00
+Business purpose: Taxi from Denver airport to the client site for the server install
+Receipt: itemised (Metered fare 62.00; Airport fee 4.00; Tip 8.00; total 74.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: this receipt was already reimbursed on 12 Oct 2026.
+Notes: Flight arrived 40 minutes late."
+F02-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30452
+Employee: Marcus Oyelaran, Engineering
+Expense date: 3 Oct 2026
+Submitted: 20 Oct 2026
+Category: Taxi or rideshare
+Vendor: Metro Cab Co., Denver
+Amount claimed: USD 74.00
+Business purpose: Taxi from Denver airport to the client site for the server install
+Receipt: to follow
+Pre-approval: none
+Attachments: none
+Finance system check: no earlier reimbursement found.
+Notes: Flight arrived 40 minutes late."
+F02-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30452
+Employee: Marcus Oyelaran, Engineering
+Expense date: 3 Oct 2026
+Submitted: 20 Oct 2026
+Category: Taxi or rideshare
+Vendor: Metro Cab Co., Denver
+Amount claimed: USD 74.00
+Business purpose: Taxi from Denver airport to the client site for the server install
+Receipt: to follow
+Pre-approval: none
+Attachments: none
+Finance system check: no earlier reimbursement found.
+Notes: Flight arrived 40 minutes late. Toll road taken because of roadworks on Highway 70, adding 15-20 minutes."
+F03-v1,complete,APPROVE,approved,,"Claim reference: HP-30488
+Employee: Elena Vasquez, Consulting
+Expense date: 8 Oct 2026
+Submitted: 15 Oct 2026
+Category: Hotel
+Vendor: Harborview Hotel, Seattle
+Amount claimed: USD 430.00
+Nights: 2
+Business purpose: Client workshop at the Seattle office
+Receipt: itemised (Room charges 396.00; City tax 34.00; total 430.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Booked through the company travel portal."
+F03-v2,rule broken,REJECT,approved,,"Claim reference: HP-30488
+Employee: Elena Vasquez, Consulting
+Expense date: 8 Oct 2026
+Submitted: 15 Oct 2026
+Category: Hotel
+Vendor: Harborview Hotel, Seattle
+Amount claimed: USD 520.00
+Nights: 2
+Business purpose: Client workshop at the Seattle office
+Receipt: itemised (Room charges 484.00; City tax 36.00; total 520.00)
+Pre-approval: requested, declined by the manager
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Booked through the company travel portal."
+F03-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30488
+Employee: Elena Vasquez, Consulting
+Expense date: 8 Oct 2026
+Submitted: 15 Oct 2026
+Category: Hotel
+Vendor: Harborview Hotel, Seattle
+Amount claimed: USD 430.00
+Business purpose: Client workshop at the Seattle office
+Receipt: itemised (Room charges 396.00; City tax 34.00; total 430.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Booked through the company travel portal."
+F03-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30488
+Employee: Elena Vasquez, Consulting
+Expense date: 8 Oct 2026
+Submitted: 15 Oct 2026
+Category: Hotel
+Vendor: Harborview Hotel, Seattle
+Amount claimed: USD 430.00
+Business purpose: Client workshop at the Seattle office
+Receipt: itemised (Room charges 396.00; City tax 34.00; total 430.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Booked through the company travel portal. Late checkout was requested."
+F04-v1,complete,APPROVE,approved,,"Claim reference: HP-30503
+Employee: Tom Becker, Field Service
+Expense date: 6 Oct 2026
+Submitted: 13 Oct 2026
+Category: Mileage
+Vendor: Own car
+Amount claimed: USD 117.00
+Distance driven: 180 miles
+Business purpose: Inspection of the cooling units at the Fresno warehouse
+Receipt: mileage log (dates and route, office to the Fresno warehouse and back)
+Pre-approval: none
+Attachments: Mileage log
+Finance system check: no earlier reimbursement found.
+Notes: Fuel paid personally, not claimed separately."
+F04-v2,rule broken,REJECT,approved,,"Claim reference: HP-30503
+Employee: Tom Becker, Field Service
+Expense date: 6 Oct 2026
+Submitted: 13 Oct 2026
+Category: Mileage
+Vendor: Own car
+Amount claimed: USD 117.00
+Distance driven: 180 miles
+Business purpose: Drive to my cousin's wedding in Fresno
+Receipt: mileage log (dates and route, office to the Fresno warehouse and back)
+Pre-approval: none
+Attachments: Mileage log
+Finance system check: no earlier reimbursement found.
+Notes: Fuel paid personally, not claimed separately."
+F04-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30503
+Employee: Tom Becker, Field Service
+Expense date: 6 Oct 2026
+Submitted: 13 Oct 2026
+Category: Mileage
+Vendor: Own car
+Amount claimed: USD 117.00
+Business purpose: Inspection of the cooling units at the Fresno warehouse
+Receipt: mileage log (dates and route, office to the Fresno warehouse and back)
+Pre-approval: none
+Attachments: Mileage log
+Finance system check: no earlier reimbursement found.
+Notes: Fuel paid personally, not claimed separately."
+F04-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30503
+Employee: Tom Becker, Field Service
+Expense date: 6 Oct 2026
+Submitted: 13 Oct 2026
+Category: Mileage
+Vendor: Own car
+Amount claimed: USD 117.00
+Business purpose: Inspection of the cooling units at the Fresno warehouse
+Receipt: mileage log (dates and route, office to the Fresno warehouse and back)
+Pre-approval: none
+Attachments: Mileage log
+Finance system check: no earlier reimbursement found.
+Notes: Fuel paid personally, not claimed separately. Used the company parking pass."
+F05-v1,complete,APPROVE,approved,,"Claim reference: HP-30539
+Employee: Aisha Karim, Data Science
+Expense date: 1 Oct 2026
+Submitted: 10 Oct 2026
+Category: Conference fees
+Vendor: Northern Analytics Summit
+Amount claimed: USD 1,250.00
+Business purpose: Registration to present the team's forecasting work at the summit
+Receipt: itemised (Full conference pass 1,250.00; total 1,250.00)
+Pre-approval: approved in writing by the manager (email attached)
+Attachments: Itemised receipt, Manager approval email
+Finance system check: no earlier reimbursement found.
+Notes: Speaker slot confirmed by the organisers."
+F05-v2,rule broken,REJECT,approved,,"Claim reference: HP-30539
+Employee: Aisha Karim, Data Science
+Expense date: 12 Jun 2026
+Submitted: 10 Oct 2026
+Category: Conference fees
+Vendor: Northern Analytics Summit
+Amount claimed: USD 1,250.00
+Business purpose: Registration to present the team's forecasting work at the summit
+Receipt: itemised (Full conference pass 1,250.00; total 1,250.00)
+Pre-approval: approved in writing by the manager (email attached)
+Attachments: Itemised receipt, Manager approval email
+Finance system check: no earlier reimbursement found.
+Notes: Speaker slot confirmed by the organisers."
+F05-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30539
+Employee: Aisha Karim, Data Science
+Expense date: 1 Oct 2026
+Submitted: 10 Oct 2026
+Category: Conference fees
+Vendor: Northern Analytics Summit
+Amount claimed: USD 1,250.00
+Business purpose: Registration to present the team's forecasting work at the summit
+Receipt: itemised (Full conference pass 1,250.00; total 1,250.00)
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Speaker slot confirmed by the organisers."
+F05-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30539
+Employee: Aisha Karim, Data Science
+Expense date: 1 Oct 2026
+Submitted: 10 Oct 2026
+Category: Conference fees
+Vendor: Northern Analytics Summit
+Amount claimed: USD 1,250.00
+Business purpose: Registration to present the team's forecasting work at the summit
+Receipt: itemised (Full conference pass 1,250.00; total 1,250.00)
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Speaker slot confirmed by the organisers. Talk slides were reviewed by the communications team before submission."
+F06-v1,complete,APPROVE,approved,,"Claim reference: HP-30561
+Employee: Daniel Osei, Partnerships
+Expense date: 16 Oct 2026
+Submitted: 21 Oct 2026
+Category: Meals
+Vendor: Bistro Nord, Boston
+Amount claimed: USD 148.00
+Attendees: 3
+Business purpose: Lunch with two buyers from Kestrel Foods to discuss the contract renewal
+Receipt: itemised (Lunch mains 102.00; Desserts 24.00; Coffee and soft drinks 22.00; total 148.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Kestrel Foods is an existing customer."
+F06-v2,rule broken,REJECT,approved,,"Claim reference: HP-30561
+Employee: Daniel Osei, Partnerships
+Expense date: 16 Oct 2026
+Submitted: 21 Oct 2026
+Category: Meals
+Vendor: Bistro Nord, Boston
+Amount claimed: USD 148.00
+Attendees: 3
+Business purpose: Lunch with two buyers from Kestrel Foods to discuss the contract renewal
+Receipt: itemised (Lunch mains 102.00; Cocktails 30.00; Coffee and soft drinks 16.00; total 148.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Kestrel Foods is an existing customer."
+F06-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30561
+Employee: Daniel Osei, Partnerships
+Expense date: 16 Oct 2026
+Submitted: 21 Oct 2026
+Category: Meals
+Vendor: Bistro Nord, Boston
+Amount claimed: USD 148.00
+Attendees: 3
+Business purpose: Lunch with two buyers from Kestrel Foods to discuss the contract renewal
+Receipt: card payment slip, total 148.00
+Pre-approval: none
+Attachments: Card payment slip
+Finance system check: no earlier reimbursement found.
+Notes: Kestrel Foods is an existing customer."
+F06-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30561
+Employee: Daniel Osei, Partnerships
+Expense date: 16 Oct 2026
+Submitted: 21 Oct 2026
+Category: Meals
+Vendor: Bistro Nord, Boston
+Amount claimed: USD 148.00
+Attendees: 3
+Business purpose: Lunch with two buyers from Kestrel Foods to discuss the contract renewal
+Receipt: card payment slip, total 148.00
+Pre-approval: none
+Attachments: Card payment slip
+Finance system check: no earlier reimbursement found.
+Notes: Kestrel Foods is an existing customer. Table for 12:30, booked on 14 Oct."
+F07-v1,complete,APPROVE,approved,,"Claim reference: HP-30594
+Employee: Sofia Lindqvist, Product
+Expense date: 9 Oct 2026
+Submitted: 19 Oct 2026
+Category: Taxi or rideshare
+Vendor: RideNow
+Amount claimed: CAD 82.00 (USD 59.70 at the receipt-date rate)
+Business purpose: Ride from the airport to the partner's office for the onboarding visit
+Receipt: itemised (Airport to partner office 82.00; total 82.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Booked in the RideNow app."
+F07-v2,rule broken,REJECT,approved,,"Claim reference: HP-30594
+Employee: Sofia Lindqvist, Product
+Expense date: 9 Oct 2026
+Submitted: 19 Oct 2026
+Category: Taxi or rideshare
+Vendor: RideNow
+Amount claimed: CAD 82.00 (USD 59.70 at the receipt-date rate)
+Business purpose: Ride from the airport to the partner's office for the onboarding visit
+Receipt: itemised (Airport to partner office 82.00; total 82.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: this receipt was already reimbursed on 14 Oct 2026.
+Notes: Booked in the RideNow app."
+F07-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30594
+Employee: Sofia Lindqvist, Product
+Expense date: 9 Oct 2026
+Submitted: 19 Oct 2026
+Category: Taxi or rideshare
+Vendor: RideNow
+Amount claimed: 82.00
+Business purpose: Ride from the airport to the partner's office for the onboarding visit
+Receipt: itemised (Airport to partner office 82.00; total 82.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Booked in the RideNow app."
+F07-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30594
+Employee: Sofia Lindqvist, Product
+Expense date: 9 Oct 2026
+Submitted: 19 Oct 2026
+Category: Taxi or rideshare
+Vendor: RideNow
+Amount claimed: 82.00
+Business purpose: Ride from the airport to the partner's office for the onboarding visit
+Receipt: itemised (Airport to partner office 82.00; total 82.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Booked in the RideNow app. Driver helped load the demo equipment cases."
+F08-v1,complete,APPROVE,approved,,"Claim reference: HP-30620
+Employee: Kenji Watanabe, Legal
+Expense date: 12 Oct 2026
+Submitted: 19 Oct 2026
+Category: Hotel
+Vendor: Grand Meridian, Chicago
+Amount claimed: USD 396.00
+Nights: 2
+Business purpose: Deposition preparation with outside counsel
+Receipt: itemised (Room charges 360.00; Taxes 36.00; total 396.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Corporate rate applied."
+F08-v2,rule broken,REJECT,approved,,"Claim reference: HP-30620
+Employee: Kenji Watanabe, Legal
+Expense date: 12 Oct 2026
+Submitted: 19 Oct 2026
+Category: Hotel
+Vendor: Grand Meridian, Chicago
+Amount claimed: USD 414.00
+Nights: 2
+Business purpose: Deposition preparation with outside counsel
+Receipt: itemised (Room charges 360.00; Taxes 36.00; In-room movie 18.00; total 414.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Corporate rate applied."
+F08-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30620
+Employee: Kenji Watanabe, Legal
+Expense date: 12 Oct 2026
+Submitted: 19 Oct 2026
+Category: Hotel
+Vendor: Grand Meridian, Chicago
+Amount claimed: USD 396.00
+Nights: 2
+Business purpose: Deposition preparation with outside counsel
+Receipt: booking confirmation from the hotel website, total 396.00
+Pre-approval: none
+Attachments: Booking confirmation
+Finance system check: no earlier reimbursement found.
+Notes: Corporate rate applied."
+F08-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30620
+Employee: Kenji Watanabe, Legal
+Expense date: 12 Oct 2026
+Submitted: 19 Oct 2026
+Category: Hotel
+Vendor: Grand Meridian, Chicago
+Amount claimed: USD 396.00
+Nights: 2
+Business purpose: Deposition preparation with outside counsel
+Receipt: booking confirmation from the hotel website, total 396.00
+Pre-approval: none
+Attachments: Booking confirmation
+Finance system check: no earlier reimbursement found.
+Notes: Corporate rate applied. Quiet room."
+F09-v1,complete,APPROVE,approved,,"Claim reference: HP-30647
+Employee: Grace Mwangi, Finance
+Expense date: 2 Oct 2026
+Submitted: 22 Oct 2026
+Category: Office supplies
+Vendor: OfficeHub online store
+Amount claimed: USD 139.00
+Business purpose: Noise-cancelling headset for the new hot-desk area
+Receipt: itemised (Wireless headset 129.00; Delivery 10.00; total 139.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Approved headset model from the IT list."
+F09-v2,rule broken,REJECT,approved,,"Claim reference: HP-30647
+Employee: Grace Mwangi, Finance
+Expense date: 25 May 2026
+Submitted: 22 Oct 2026
+Category: Office supplies
+Vendor: OfficeHub online store
+Amount claimed: USD 139.00
+Business purpose: Noise-cancelling headset for the new hot-desk area
+Receipt: itemised (Wireless headset 129.00; Delivery 10.00; total 139.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Approved headset model from the IT list."
+F09-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30647
+Employee: Grace Mwangi, Finance
+Submitted: 22 Oct 2026
+Category: Office supplies
+Vendor: OfficeHub online store
+Amount claimed: USD 139.00
+Business purpose: Noise-cancelling headset for the new hot-desk area
+Receipt: itemised (Wireless headset 129.00; Delivery 10.00; total 139.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Approved headset model from the IT list."
+F09-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30647
+Employee: Grace Mwangi, Finance
+Submitted: 22 Oct 2026
+Category: Office supplies
+Vendor: OfficeHub online store
+Amount claimed: USD 139.00
+Business purpose: Noise-cancelling headset for the new hot-desk area
+Receipt: itemised (Wireless headset 129.00; Delivery 10.00; total 139.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Approved headset model from the IT list. Delivered to the front desk."
+F10-v1,complete,APPROVE,approved,,"Claim reference: HP-30672
+Employee: Oliver Brandt, Marketing
+Expense date: 7 Oct 2026
+Submitted: 14 Oct 2026
+Category: Rail
+Vendor: Northline Rail
+Amount claimed: USD 186.00
+Business purpose: Return trip to staff the company stand at the Philadelphia trade show
+Receipt: itemised (Return ticket, standard class 186.00; total 186.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Ticket bought at the station."
+F10-v2,rule broken,REJECT,approved,,"Claim reference: HP-30672
+Employee: Oliver Brandt, Marketing
+Expense date: 7 Oct 2026
+Submitted: 14 Oct 2026
+Category: Rail
+Vendor: Northline Rail
+Amount claimed: USD 186.00
+Business purpose: Weekend visit to my parents in Philadelphia
+Receipt: itemised (Return ticket, standard class 186.00; total 186.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Ticket bought at the station."
+F10-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30672
+Employee: Oliver Brandt, Marketing
+Expense date: 7 Oct 2026
+Submitted: 14 Oct 2026
+Category: Rail
+Vendor: Northline Rail
+Amount claimed: USD 186.00
+Receipt: itemised (Return ticket, standard class 186.00; total 186.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Ticket bought at the station."
+F10-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30672
+Employee: Oliver Brandt, Marketing
+Expense date: 7 Oct 2026
+Submitted: 14 Oct 2026
+Category: Rail
+Vendor: Northline Rail
+Amount claimed: USD 186.00
+Receipt: itemised (Return ticket, standard class 186.00; total 186.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Ticket bought at the station. Seat reservation was included in the fare, and the train left on time."
+F11-v1,complete,APPROVE,approved,,"Claim reference: HP-30698
+Employee: Hannah Kowalski, Operations
+Expense date: 5 Oct 2026
+Submitted: 12 Oct 2026
+Category: Car rental
+Vendor: Sunline Car Rental, Phoenix
+Amount claimed: USD 196.00
+Rental days: 3
+Business purpose: Supplier site visits around Phoenix
+Receipt: itemised (Base rate 168.00; Fees and taxes 28.00; total 196.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Compact car class."
+F11-v2,rule broken,REJECT,approved,,"Claim reference: HP-30698
+Employee: Hannah Kowalski, Operations
+Expense date: 5 Oct 2026
+Submitted: 12 Oct 2026
+Category: Car rental
+Vendor: Sunline Car Rental, Phoenix
+Amount claimed: USD 208.00
+Rental days: 3
+Business purpose: Supplier site visits around Phoenix
+Receipt: itemised (Base rate 168.00; Fees and taxes 28.00; Traffic fine administration fee 12.00; total 208.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Compact car class."
+F11-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30698
+Employee: Hannah Kowalski, Operations
+Expense date: 5 Oct 2026
+Submitted: 12 Oct 2026
+Category: Car rental
+Vendor: Sunline Car Rental, Phoenix
+Amount claimed: USD 196.00
+Business purpose: Supplier site visits around Phoenix
+Receipt: itemised (Base rate 168.00; Fees and taxes 28.00; total 196.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Compact car class."
+F11-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30698
+Employee: Hannah Kowalski, Operations
+Expense date: 5 Oct 2026
+Submitted: 12 Oct 2026
+Category: Car rental
+Vendor: Sunline Car Rental, Phoenix
+Amount claimed: USD 196.00
+Business purpose: Supplier site visits around Phoenix
+Receipt: itemised (Base rate 168.00; Fees and taxes 28.00; total 196.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Compact car class. Returned with a full tank."
+F12-v1,complete,APPROVE,approved,,"Claim reference: HP-30715
+Employee: Rahul Mehta, Customer Support
+Expense date: 1 Oct 2026
+Submitted: 24 Oct 2026
+Category: Home internet
+Vendor: Brightwave Broadband
+Amount claimed: USD 30.00
+Business-use share: 50% of the monthly bill
+Business purpose: Home internet used for remote support shifts
+Receipt: itemised (Monthly broadband plan, October 60.00; total 60.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Plan includes a static IP address."
+F12-v2,rule broken,REJECT,approved,,"Claim reference: HP-30715
+Employee: Rahul Mehta, Customer Support
+Expense date: 1 Oct 2026
+Submitted: 24 Oct 2026
+Category: Home internet
+Vendor: Brightwave Broadband
+Amount claimed: USD 30.00
+Business-use share: 50% of the monthly bill
+Business purpose: Home internet used for remote support shifts
+Receipt: itemised (Monthly broadband plan, October 60.00; total 60.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: this receipt was already reimbursed on 20 Oct 2026.
+Notes: Plan includes a static IP address."
+F12-v3,evidence missing,REQUEST_INFO,approved,,"Claim reference: HP-30715
+Employee: Rahul Mehta, Customer Support
+Expense date: 1 Oct 2026
+Submitted: 24 Oct 2026
+Category: Home internet
+Vendor: Brightwave Broadband
+Amount claimed: USD 30.00
+Business purpose: Home internet used for remote support shifts
+Receipt: itemised (Monthly broadband plan, October 60.00; total 60.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Plan includes a static IP address."
+F12-v4,"evidence missing, padded",REQUEST_INFO,approved,,"Claim reference: HP-30715
+Employee: Rahul Mehta, Customer Support
+Expense date: 1 Oct 2026
+Submitted: 24 Oct 2026
+Category: Home internet
+Vendor: Brightwave Broadband
+Amount claimed: USD 30.00
+Business purpose: Home internet used for remote support shifts
+Receipt: itemised (Monthly broadband plan, October 60.00; total 60.00)
+Pre-approval: none
+Attachments: Itemised receipt
+Finance system check: no earlier reimbursement found.
+Notes: Plan includes a static IP address. Router was replaced by the provider this month."

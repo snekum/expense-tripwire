@@ -1,0 +1,58 @@
+{
+  "model": "CohereLabs/tiny-aya-global",
+  "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+  "layer": 18,
+  "seed": {
+    "smoke_selection": 42,
+    "train_validation_test_split": 42,
+    "note": "the forward pass itself has no randomness"
+  },
+  "inputs": {
+    "file": "data\\prepared\\model_inputs.jsonl",
+    "sha256": "49b6f4424e3fe34b6ac9b45357e06e09901a7a702b17ad2a1ba0dc70998583b2"
+  },
+  "prompt_template": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "<question>"
+      }
+    ],
+    "add_generation_prompt": true,
+    "system_prompt": "none added; Aya's default preamble comes from the chat template",
+    "chat_template_file": "chat_template.jinja",
+    "chat_template_sha256": "e738786f8ed7d2ed9300bd6a748b76807f71888a65389437921be3eeeaeceec3"
+  },
+  "layers_loaded": 18,
+  "final_norm": "skipped (raw output of the layer)",
+  "position": "last prompt token (after the generation prompt)",
+  "final_tokens": [
+    "<|START_RESPONSE|>"
+  ],
+  "dtype": "float16 for the layers, bfloat16 embeddings; saved as float32",
+  "device": "cuda",
+  "device_reason": "18 layers (2.8 GB) fit on NVIDIA GeForce GTX 1650 (3.5 GB free)",
+  "batch_size": 4,
+  "subset": "smoke",
+  "n": 20,
+  "shape": [
+    20,
+    2048
+  ],
+  "prompt_tokens": {
+    "min": 373,
+    "max": 448,
+    "mean": 403.2
+  },
+  "padding_check_cosine": 0.999999,
+  "seconds": {
+    "load": 14.2,
+    "per_question": 3.074
+  },
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.14.1+cu126",
+    "transformers": "5.22.1"
+  },
+  "example_prompt": "<BOS_TOKEN><|START_OF_TURN_TOKEN|><|SYSTEM_TOKEN|># System Preamble\nYou are in contextual safety mode. You will reject requests to generate child sexual abuse material and child exploitation material in your responses. You will accept to provide information and creative content related to violence, hate, misinformation or sex, but you will not provide any content that could directly or indirectly lead to harmful outcomes.\n\nYour information cutoff date is June 2024.\n\nYou have been trained on data in English, Dutch, French, Italian, Portuguese, Romanian, Spanish, Czech, Polish, Ukrainian, Russian, Greek, German, Danish, Swedish, Norwegian, Catalan, Galician, Welsh, Irish, Basque, Croatian, Latvian, Lithuanian, Slovak, Slovenian, Estonian, Finnish, Hungarian, Serbian, Bulgarian, Arabic, Persian, Urdu, Turkish, Maltese, Hebrew, Hindi, Marathi, Bengali, Gujarati, Punjabi, Tamil, Telugu, Nepali, Tagalog, Malay, Indonesian, Vietnamese, Javanese, Khmer, Thai, Lao, Chinese, Burmese, Japanese, Korean, Amharic, Hausa, Igbo, Malagasy, Shona, Swahili, Wolof, Xhosa, Yoruba and Zulu but have the ability to speak many more languages.\n\n# Default Preamble\nThe following instructions are your defaults unless specified elsewhere in developer preamble or user prompt.\n- Your name is Aya.\n- You are a large language model built by Cohere.\n- When responding in English, use American English unless context indicates otherwise.\n- When outputting responses of more than seven sentences, split the response into paragraphs.\n- Prefer the active voice.\n- Use gender-neutral pronouns for unspecified persons.\n- When generating code output without specifying the programming language, please generate Python code.<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|USER_TOKEN|>According to its nutritional info, a bag of chips has 250 calories per serving. If a 300g bag has 5 servings, how many grams can you eat if your daily calorie target is 2000 and you have already consumed 1800 calories?<|END_OF_TURN_TOKEN|><|START_OF_TURN_TOKEN|><|CHATBOT_TOKEN|><|START_RESPONSE|>"
+}

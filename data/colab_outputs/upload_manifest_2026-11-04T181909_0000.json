@@ -1,0 +1,26 @@
+{
+  "built_at": "2026-11-04T18:19:09+00:00",
+  "model": "CohereLabs/tiny-aya-global",
+  "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+  "expense_ready": false,
+  "files": {
+    "aya_common.py": "e5840b79e59179c76b038fb82b239dbbac317d966ba44141cd4cb94e970f825d",
+    "review_gate.py": "175b3f24e6e4451bb00ff1e458870b68a9fcffaf5ed4649e11a231987371df02",
+    "collect_v2_activations.py": "9f7706283c04910e813bedcb5170a58e30a7fd164c826273737751ebcec410c6",
+    "pyproject.toml": "5da61616da93f75a58a20469daf8c9ede0d8d1cbfe1417fd17f42198cef04547",
+    "uv.lock": "17a39d6fb8c105bbe597a5eac69d788efe2ccb84075c6041ba08b0da6ea6a164",
+    ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+    "results/equivalence_check.json": "a773a80fe8e106363eca18d2970e6df09ec4d66fce9c10828803ae1926e07d33",
+    "data/v2/model_inputs.jsonl": "8d841e747b3dc7d7f949ca9881df4abb8bbec00183ba9cc6ed368a2fef3e7bc8",
+    "data/expense/prompts.jsonl": "70832e3d76562ee2424b6680d93c518029eef4f339a277c82c11a93d55f6fb50",
+    "data/reference/SHA256SUMS.json": "27b01d44a80b1ae39d58b83921a59ba68cbfe27438aac42e24a5d2c73728c306",
+    "data/reference/diagnostic/activations.npy": "b82c6f797b0f1f82469221166307eaecf7c693285ec562f3cb9430fba3d2aebd",
+    "data/reference/diagnostic/example_ids.json": "2376a46ec4fd512e3e067086d2abd4887010124f11d256e7e3c59ca8dd833fba",
+    "data/reference/diagnostic/meta.json": "ec1c5707142e2348702931f7cf0eedab5aff72f354f11ebd69fc5fc37ef7400b",
+    "data/reference/diagnostic/texts.jsonl": "ea9e60a514273dd0ac890160199b201b19f36852a399e3158b867b42f3defb95",
+    "data/reference/smoke/activations.npy": "02561c4a07142fe0dd0e8a9810306d5099f11ef19d01c2db108948f788ea6db0",
+    "data/reference/smoke/example_ids.json": "44b22aa96708d4309b56bf728d4ec0707a02f5bffb2f24a95d3d35d82d1daa13",
+    "data/reference/smoke/meta.json": "a775762dfd67147b96677f6c324e8668ab4b7de2322ad2cf4dc0837d605c169c",
+    "data/reference/smoke/texts.jsonl": "511c59768c9ed7a66d3049bf808e352cc411b6380e1b26fdb933bf26c2b7d118"
+  }
+}

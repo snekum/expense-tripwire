@@ -1,0 +1,85 @@
+{
+  "created_by": "run_expense_decisions.py",
+  "created_at": "2026-11-04T22:06:28+00:00",
+  "model": "CohereLabs/tiny-aya-global",
+  "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+  "prompts_sha256": "382a01be171665d692b2a6d89dbf747050f3b64cfa1752b5018c948f5dfa6866",
+  "prompt_template": "aya_common.build_prompt (chat template, one user turn, generation prompt added)",
+  "seed": 42,
+  "sampled_wording": "W1",
+  "n_samples": 5,
+  "temperature": 0.7,
+  "max_new_tokens": 80,
+  "batch_size": 1,
+  "greedy_states": "greedy_states/<prompt_id>.npy, shape (layers + 1, hidden): entry 0 token embedding, entry k output of layer k (before the final norm), last prompt token, float16",
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "dtype": "float16 for embeddings, layers, final norm and output layer; rotary table float32; loaded from bfloat16",
+  "chat_template_sha256": "e738786f8ed7d2ed9300bd6a748b76807f71888a65389437921be3eeeaeceec3",
+  "stop_token_ids": [
+    3,
+    6,
+    261001
+  ],
+  "greedy_config": {
+    "max_new_tokens": 80,
+    "do_sample": false,
+    "pad_token_id": 0,
+    "eos_token_id": [
+      3,
+      6,
+      261001
+    ],
+    "transformers_version": "5.22.1"
+  },
+  "sample_config": {
+    "max_new_tokens": 80,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_k": 0,
+    "top_p": 1.0,
+    "pad_token_id": 0,
+    "eos_token_id": [
+      3,
+      6,
+      261001
+    ],
+    "transformers_version": "5.22.1"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "torch": "2.14.1+cu126",
+    "transformers": "5.22.1"
+  },
+  "greedy_rerun_identical": {
+    "F01-v1-W1": true,
+    "F06-v4-W3": true,
+    "F12-v4-W3": true
+  },
+  "summary": {
+    "greedy": {
+      "decisions": 144,
+      "strict_parse": 144,
+      "lenient_parse": 144,
+      "hit_max_new_tokens": 0,
+      "actions": {
+        "APPROVE": 73,
+        "REJECT": 3,
+        "REQUEST_INFO": 68,
+        "null": 0
+      }
+    },
+    "sampled": {
+      "decisions": 240,
+      "strict_parse": 193,
+      "lenient_parse": 240,
+      "hit_max_new_tokens": 2,
+      "actions": {
+        "APPROVE": 56,
+        "REJECT": 10,
+        "REQUEST_INFO": 174,
+        "null": 0
+      }
+    }
+  }
+}

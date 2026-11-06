@@ -1,0 +1,26 @@
+{
+  "model": "CohereLabs/tiny-aya-global",
+  "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+  "layer": 18,
+  "device": "cuda",
+  "dtype": "float16 for the layers, bfloat16 embeddings; saved as float32",
+  "matches_pilot_setup": true,
+  "batch_size": 4,
+  "chat_template_sha256": "e738786f8ed7d2ed9300bd6a748b76807f71888a65389437921be3eeeaeceec3",
+  "final_tokens": [
+    "<|START_RESPONSE|>"
+  ],
+  "items_sha256": "3ef363a2a70deb1c007f8044b29a812143454f104e66549a89da1d30d710ff9b",
+  "n": 48,
+  "prompt_tokens": {
+    "min": 397,
+    "max": 428
+  },
+  "padding_check_cosine": 0.999997,
+  "seconds_per_question": 3.024,
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.14.1+cu126",
+    "transformers": "5.22.1"
+  }
+}

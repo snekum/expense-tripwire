@@ -1,0 +1,89 @@
+{
+  "fixed_before_test": true,
+  "seed": 42,
+  "C_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "chosen": {
+    "probe": {
+      "C": 100.0,
+      "threshold": 4.499581336975098,
+      "validation_auroc": 0.9999830649121916,
+      "validation_balanced_accuracy": 0.9979423868312758
+    },
+    "length": {
+      "C": 1.0,
+      "threshold": 0.6573199799583229,
+      "validation_auroc": 0.9814645463936731,
+      "validation_balanced_accuracy": 0.9320987654320988
+    },
+    "tfidf": {
+      "C": 100.0,
+      "threshold": -0.263253409040539,
+      "validation_auroc": 0.9816084946400446,
+      "validation_balanced_accuracy": 0.9403292181069959
+    },
+    "shuffled": {
+      "C": 0.01,
+      "threshold": -1.825982689857483,
+      "validation_auroc": 0.4778235025148606,
+      "validation_balanced_accuracy": 0.5185185185185186
+    }
+  },
+  "selection_rule": "C by validation AUROC (ties -> smaller C); threshold by validation balanced accuracy",
+  "prediction_rule": "predict should_abstain when decision score >= threshold",
+  "features": {
+    "probe": "2,048 layer-18 activations, StandardScaler fit on train",
+    "length": "word count, character count, StandardScaler fit on train",
+    "tfidf": {
+      "lowercase": true,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "sublinear_tf": true,
+      "note": "vocabulary and idf fit on train"
+    },
+    "shuffled": "as probe, trained on training labels permuted with the seed"
+  },
+  "model": "LogisticRegression, L2 (l1_ratio=0), lbfgs, max_iter=5000",
+  "scores": "decision function (log-odds); not evaluated as calibrated probabilities",
+  "bootstrap": {
+    "resamples": 1000,
+    "unit": "original question (both versions together)",
+    "seed": 42
+  },
+  "length_overlap_words": {
+    "range": [
+      17.0,
+      50.0
+    ],
+    "defined_from": "train only: shortest original to longest context-removed"
+  },
+  "data": {
+    "activations": "data\\activations\\all_layer18_cuda_float16",
+    "activations_sha256": "3288d476649a4667f6dbcc93197de3e8f2822541d6718dcbc480837ee6a549e4",
+    "model": "CohereLabs/tiny-aya-global",
+    "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+    "layer": 18,
+    "inputs_sha256": "49b6f4424e3fe34b6ac9b45357e06e09901a7a702b17ad2a1ba0dc70998583b2",
+    "labels_sha256": "6b96ef78383a0b9f478e1d54055725c8cd0165b48798c25762b4f7c80f85b400",
+    "rows": {
+      "train": 1456,
+      "validation": 486,
+      "test": 484
+    }
+  },
+  "versions": {
+    "python": "3.12.13",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  }
+}

@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+data/raw/
+data/**/activations*/
+*.npy
+colab/*.zip
+data/colab_outputs/**/*.npy
+data/dry_run/
+
+# working notes for Claude Code, kept local
+CLAUDE.md

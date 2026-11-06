@@ -1,0 +1,210 @@
+{
+  "created_by": "train_probe_v2.py",
+  "created_at": "2026-11-05T17:26:18+00:00",
+  "dry_run": false,
+  "fixed_before_test": true,
+  "seed": 42,
+  "C_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "layer_choice": {
+    "rule": "for each layer 1-36: train on one dataset's train split, C by its validation AUROC, score the other dataset's validation split; layer score = mean of the two transfer AUROCs; best layer, or the earliest within 0.01 of it (PLAN.md Part D, fixed 2026-11-04)",
+    "best_mean_transfer_auroc": 0.7201083729366263,
+    "layers_within_tolerance": [
+      23
+    ],
+    "chosen_layer": 23,
+    "always_reported_layer": 18,
+    "curve": "layer_curve.csv",
+    "convergence_warnings": 0
+  },
+  "chosen": {
+    "probe_L18": {
+      "layer": 18,
+      "C": 0.01,
+      "threshold": 0.299327552318573,
+      "validation_auroc": 0.9032896922141653,
+      "validation_balanced_accuracy": 0.8233224073853559
+    },
+    "probe_L23": {
+      "layer": 23,
+      "C": 0.01,
+      "threshold": 0.42845994234085083,
+      "validation_auroc": 0.9000620460143269,
+      "validation_balanced_accuracy": 0.837702667978616
+    },
+    "length": {
+      "layer": null,
+      "C": 0.001,
+      "threshold": 0.0030448203162716653,
+      "validation_auroc": 0.47096371874980414,
+      "validation_balanced_accuracy": 0.504891607493153
+    },
+    "tfidf": {
+      "layer": null,
+      "C": 100.0,
+      "threshold": 0.6963153418813889,
+      "validation_auroc": 0.6590289485394119,
+      "validation_balanced_accuracy": 0.625793593592339
+    },
+    "shuffled_L18": {
+      "layer": 18,
+      "C": 0.1,
+      "threshold": -0.5654104948043823,
+      "validation_auroc": 0.4730037164935854,
+      "validation_balanced_accuracy": 0.5043024837207554
+    },
+    "shuffled_L23": {
+      "layer": 23,
+      "C": 0.1,
+      "threshold": 0.7200185060501099,
+      "validation_auroc": 0.48624646682418415,
+      "validation_balanced_accuracy": 0.5191841262479711
+    }
+  },
+  "transfer": {
+    "probe_L18": {
+      "umwp": {
+        "C": 0.01,
+        "threshold": -0.368177205324173,
+        "validation_auroc": 0.940575,
+        "validation_balanced_accuracy": 0.86
+      },
+      "squad2": {
+        "C": 0.01,
+        "threshold": 0.18630102276802063,
+        "validation_auroc": 0.8800778583887359,
+        "validation_balanced_accuracy": 0.8054804216486767
+      }
+    },
+    "probe_L23": {
+      "umwp": {
+        "C": 0.01,
+        "threshold": 0.04541867971420288,
+        "validation_auroc": 0.9214,
+        "validation_balanced_accuracy": 0.8575
+      },
+      "squad2": {
+        "C": 0.001,
+        "threshold": -0.2076822966337204,
+        "validation_auroc": 0.9043454081245734,
+        "validation_balanced_accuracy": 0.8376854824439445
+      }
+    },
+    "length": {
+      "umwp": {
+        "C": 1.0,
+        "threshold": 0.048508008764369906,
+        "validation_auroc": 0.5451874999999999,
+        "validation_balanced_accuracy": 0.5475
+      },
+      "squad2": {
+        "C": 0.0001,
+        "threshold": -0.029928398888808085,
+        "validation_auroc": 0.4855026669026012,
+        "validation_balanced_accuracy": 0.5198816956950378
+      }
+    },
+    "tfidf": {
+      "umwp": {
+        "C": 100.0,
+        "threshold": 1.6783187382504559,
+        "validation_auroc": 0.7719625,
+        "validation_balanced_accuracy": 0.73
+      },
+      "squad2": {
+        "C": 100.0,
+        "threshold": 0.22261689945230262,
+        "validation_auroc": 0.5705654844662403,
+        "validation_balanced_accuracy": 0.5666346469829875
+      }
+    },
+    "shuffled_L18": {
+      "umwp": {
+        "C": 10.0,
+        "threshold": 0.017497383058071136,
+        "validation_auroc": 0.5261250000000001,
+        "validation_balanced_accuracy": 0.5425
+      },
+      "squad2": {
+        "C": 1.0,
+        "threshold": -1.1481006145477295,
+        "validation_auroc": 0.5733714199044465,
+        "validation_balanced_accuracy": 0.566407138704214
+      }
+    },
+    "shuffled_L23": {
+      "umwp": {
+        "C": 0.0001,
+        "threshold": -0.03532629832625389,
+        "validation_auroc": 0.538075,
+        "validation_balanced_accuracy": 0.5425
+      },
+      "squad2": {
+        "C": 0.0001,
+        "threshold": -0.11922764778137207,
+        "validation_auroc": 0.5834070628681209,
+        "validation_balanced_accuracy": 0.5704264516292121
+      }
+    }
+  },
+  "selection_rule": "C by validation AUROC (ties -> smaller C); threshold by validation balanced accuracy",
+  "prediction_rule": "predict should_abstain when decision score >= threshold",
+  "features": {
+    "probe_L<k>": "2,048 activations at layer k (last prompt token), StandardScaler fit on train",
+    "length": "word count, character count, StandardScaler fit on train",
+    "tfidf": {
+      "lowercase": true,
+      "ngram_range": [
+        1,
+        2
+      ],
+      "sublinear_tf": true,
+      "note": "vocabulary and idf fit on train"
+    },
+    "shuffled_L<k>": "as probe_L<k>, trained on training labels permuted with the seed"
+  },
+  "model": "LogisticRegression, L2 (l1_ratio=0), lbfgs, max_iter=5000",
+  "scores": "decision function (log-odds); not evaluated as calibrated probabilities",
+  "convergence_warnings_stage2": 0,
+  "bootstrap": {
+    "resamples": 1000,
+    "unit": "UMWP pair or SQuAD passage (original_id)",
+    "seed": 42
+  },
+  "data": {
+    "activations": "D:\\portfolio\\expense-tripwire\\data\\colab_outputs\\activations\\v2_layers0-36_cuda_float16",
+    "activations_sha256": "f86511cad34ed6ddf0e1d75f9474f94dcdb9dc7de32bdaf5c498badd68d30eac",
+    "activations_created_at": "2026-11-04T19:23:43+00:00",
+    "gpu": "Tesla T4",
+    "model": "CohereLabs/tiny-aya-global",
+    "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+    "dtype": "float16 for the layers, embeddings looked up on the CPU",
+    "chat_template_sha256": "e738786f8ed7d2ed9300bd6a748b76807f71888a65389437921be3eeeaeceec3",
+    "inputs_sha256": "8d841e747b3dc7d7f949ca9881df4abb8bbec00183ba9cc6ed368a2fef3e7bc8",
+    "labels_sha256": "e99d4cc4c5cf5d8fb1e74bae16abb0f4d29db59c2c561a06bd630a42d1942737",
+    "rows": {
+      "umwp_train": 1200,
+      "umwp_validation": 400,
+      "umwp_test": 400,
+      "squad2_train": 1201,
+      "squad2_validation": 400,
+      "squad2_test": 399,
+      "pooled_train": 2401,
+      "pooled_validation": 800,
+      "pooled_test": 799
+    }
+  },
+  "versions": {
+    "python": "3.12.13",
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0"
+  }
+}

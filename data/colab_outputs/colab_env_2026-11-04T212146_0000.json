@@ -1,0 +1,5 @@
+{
+  "gpu": "Tesla T4, 15360 MiB, 580.82.07",
+  "colab_preinstalled_torch": "2.11.0+cu130",
+  "locked_versions": "2.14.1+cu126 5.22.1 2.5.4"
+}

@@ -1,0 +1,271 @@
+{
+  "created_by": "prepare_v2_data.py",
+  "git_commit": null,
+  "seed": 42,
+  "text_cleaned": true,
+  "source": {
+    "abstentionbench": {
+      "hf_repo": "facebook/AbstentionBench",
+      "hf_revision": "af06080e2cbfff73f02a7c33135e5567d6f7ce6a",
+      "github": "facebookresearch/AbstentionBench @ e29184174c69bc95139b8c33dcca09aacab9442a",
+      "files_sha256": {
+        "AbstentionBench.py": "800b11a2a93f2145725b47a006fda852266b9fb95ae25800ccf927c34ce8f595",
+        "data.py": "eaa0e16a3bc3a78f84bb34ff87d694664b1bdb0526bf8cedbee3bd61b9bd605d",
+        "UMWP_indices_answerable.json": "9362b5d655e35c8f31bd0b066cfcf80b7100b93e4894784980721b4a2b7dcc47",
+        "subsampling-indices.json": "238ce5eea5e4bf3675c75f6d7dc66487edae0cfc5487710f731c5a02d89b4759"
+      },
+      "license": "cc-by-nc-4.0"
+    },
+    "umwp": {
+      "url": "https://raw.githubusercontent.com/Yuki-Asuuna/UMWP/1b3ae0fae01a6c6f178361c716bbb4f7d7d54c3c/data/StandardDataset.jsonl",
+      "sha256": "e8840e8383357238a08e9c5028e4758ceceb369e1db31c64678b0f851c9c9e73",
+      "license": "CC-BY-SA-4.0 (data, per the UMWP README; the repo has no LICENSE file)"
+    },
+    "squad2": {
+      "hf_repo": "rajpurkar/squad_v2",
+      "hf_revision": "3ffb306f725f7d2ce8394bc1873b24868140c412",
+      "file": "squad_v2/validation-00000-of-00001.parquet",
+      "sha256": "0560174ab095c5ac0a8c8dc8da05f1625453c45a77e4ce9cabc6947ddfdd24cb",
+      "license": "cc-by-sa-4.0"
+    }
+  },
+  "abstentionbench_subset_sizes": {
+    "umwp": 3500,
+    "squad2": 3500
+  },
+  "umwp_category_filter": {
+    "umwp_pairs_before": 1750,
+    "umwp_pairs_after": 1492,
+    "kept_categories": [
+      "Key information missing",
+      "Ambiguous key information",
+      "Unrelated object"
+    ]
+  },
+  "cap_per_label": 1000,
+  "datasets": {
+    "squad2": {
+      "splits": {
+        "train": {
+          "rows": 1201,
+          "should_abstain_true": 591,
+          "groups": 595
+        },
+        "validation": {
+          "rows": 400,
+          "should_abstain_true": 221,
+          "groups": 184
+        },
+        "test": {
+          "rows": 399,
+          "should_abstain_true": 188,
+          "groups": 204
+        }
+      },
+      "words_by_label": {
+        "should_abstain=False": {
+          "mean": 150.3,
+          "median": 135.0,
+          "min": 48,
+          "max": 575
+        },
+        "should_abstain=True": {
+          "mean": 148.6,
+          "median": 137.0,
+          "min": 48,
+          "max": 564
+        }
+      },
+      "articles": 35
+    },
+    "umwp": {
+      "splits": {
+        "train": {
+          "rows": 1200,
+          "should_abstain_true": 600,
+          "groups": 600
+        },
+        "validation": {
+          "rows": 400,
+          "should_abstain_true": 200,
+          "groups": 200
+        },
+        "test": {
+          "rows": 400,
+          "should_abstain_true": 200,
+          "groups": 200
+        }
+      },
+      "words_by_label": {
+        "should_abstain=False": {
+          "mean": 40.9,
+          "median": 37.0,
+          "min": 14,
+          "max": 126
+        },
+        "should_abstain=True": {
+          "mean": 40.1,
+          "median": 36.0,
+          "min": 12,
+          "max": 127
+        }
+      },
+      "unanswerable_categories": {
+        "Ambiguous key information": 571,
+        "Key information missing": 386,
+        "Unrelated object": 43
+      },
+      "sources": {
+        "GSM8K": 661,
+        "SVAMP": 185,
+        "MultiArith": 108,
+        "ASDiv": 46
+      }
+    }
+  },
+  "length_rule": "length baseline validation AUROC > 0.75 -> also build a length-matched set",
+  "length_baseline": {
+    "umwp": {
+      "validation_auroc": 0.5452,
+      "chosen_C": 1.0,
+      "validation_auroc_word_count_alone": 0.5045,
+      "rule_triggered": false
+    },
+    "squad2": {
+      "validation_auroc": 0.4855,
+      "chosen_C": 0.0001,
+      "validation_auroc_word_count_alone": 0.5085,
+      "rule_triggered": false
+    }
+  },
+  "length_matched": {},
+  "format_cues": {
+    "umwp": {
+      "double period": {
+        "upstream": {
+          "should_abstain=False": 0.159,
+          "should_abstain=True": 0.0
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      },
+      "no space after a sentence": {
+        "upstream": {
+          "should_abstain=False": 0.059,
+          "should_abstain=True": 0.067
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      },
+      "leading space": {
+        "upstream": {
+          "should_abstain=False": 0.108,
+          "should_abstain=True": 0.0
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      },
+      "trailing space": {
+        "upstream": {
+          "should_abstain=False": 0.113,
+          "should_abstain=True": 0.111
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      },
+      "double space": {
+        "upstream": {
+          "should_abstain=False": 0.171,
+          "should_abstain=True": 0.172
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      }
+    },
+    "squad2": {
+      "double period": {
+        "upstream": {
+          "should_abstain=False": 0.002,
+          "should_abstain=True": 0.0
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      },
+      "no space after a sentence": {
+        "upstream": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      },
+      "leading space": {
+        "upstream": {
+          "should_abstain=False": 0.002,
+          "should_abstain=True": 0.062
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      },
+      "trailing space": {
+        "upstream": {
+          "should_abstain=False": 0.045,
+          "should_abstain=True": 0.02
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      },
+      "double space": {
+        "upstream": {
+          "should_abstain=False": 0.01,
+          "should_abstain=True": 0.005
+        },
+        "used": {
+          "should_abstain=False": 0.0,
+          "should_abstain=True": 0.0
+        }
+      }
+    }
+  },
+  "rows_changed_by_cleaning": {
+    "squad2": 145,
+    "umwp": 842
+  },
+  "overlap": {
+    "diagnostic questions": 0.143,
+    "expense claims": 0.036,
+    "umwp_gsm8k_answerable_rows": 661,
+    "of_which_in_pilot_gsm8k_exact": 0,
+    "of_which_in_pilot_gsm8k_80pct_trigrams": 0
+  },
+  "checks": {
+    "example IDs unique": true,
+    "1,000 rows per label in each dataset": true,
+    "every UMWP pair complete (one answerable, one not)": true,
+    "UMWP unanswerable rows only from the kept categories": true,
+    "no pair or passage in two splits": true,
+    "no question text in two splits": true,
+    "no SQuAD question (without its passage) in two splits": true,
+    "no v2 row copies a diagnostic question (largest share 0.143)": true,
+    "no v2 row copies an expense claim (largest share 0.036)": true
+  },
+  "all_checks_passed": true
+}

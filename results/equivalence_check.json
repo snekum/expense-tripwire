@@ -1,0 +1,61 @@
+{
+  "all_passed": true,
+  "model_checks_run": true,
+  "aya_common_sha256": "e5840b79e59179c76b038fb82b239dbbac317d966ba44141cd4cb94e970f825d",
+  "pilot_dir": "d:\\portfolio\\answerability-probe",
+  "checked_at": "2026-11-04T13:26:56+00:00",
+  "results": {
+    "pilot files unchanged before": {
+      "passed": true,
+      "detail": "13/13 match"
+    },
+    "copied functions identical": {
+      "passed": true,
+      "detail": "16 functions"
+    },
+    "copied constants identical": {
+      "passed": true,
+      "detail": "6 constants"
+    },
+    "vendor files identical to pilot": {
+      "passed": true,
+      "detail": "7 files"
+    },
+    "v1 probe reproduces pilot scores": {
+      "passed": true,
+      "detail": "largest difference 9.5e-07, predictions identical on 2426 questions"
+    },
+    "v1 length reproduces pilot scores": {
+      "passed": true,
+      "detail": "largest difference 0.0e+00, predictions identical on 2426 questions"
+    },
+    "v1 tfidf reproduces pilot scores": {
+      "passed": true,
+      "detail": "largest difference 0.0e+00, predictions identical on 2426 questions"
+    },
+    "v1 shuffled reproduces pilot scores": {
+      "passed": true,
+      "detail": "largest difference 1.8e-07, predictions identical on 2426 questions"
+    },
+    "same chat template and final token": {
+      "passed": true,
+      "detail": "final token <|START_RESPONSE|>"
+    },
+    "same device and number format as pilot": {
+      "passed": true,
+      "detail": "cuda, float16"
+    },
+    "reproduces pilot smoke activations": {
+      "passed": true,
+      "detail": "20 rows, lowest cosine 1.000000, largest difference 0.00e+00"
+    },
+    "reproduces pilot diagnostic activations": {
+      "passed": true,
+      "detail": "48 rows, lowest cosine 1.000000, largest difference 0.00e+00"
+    },
+    "pilot files unchanged after": {
+      "passed": true,
+      "detail": "13/13 match"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "smoke/activations.npy": "02561c4a07142fe0dd0e8a9810306d5099f11ef19d01c2db108948f788ea6db0",
+  "smoke/example_ids.json": "44b22aa96708d4309b56bf728d4ec0707a02f5bffb2f24a95d3d35d82d1daa13",
+  "smoke/meta.json": "a775762dfd67147b96677f6c324e8668ab4b7de2322ad2cf4dc0837d605c169c",
+  "smoke/texts.jsonl": "511c59768c9ed7a66d3049bf808e352cc411b6380e1b26fdb933bf26c2b7d118",
+  "diagnostic/activations.npy": "b82c6f797b0f1f82469221166307eaecf7c693285ec562f3cb9430fba3d2aebd",
+  "diagnostic/example_ids.json": "2376a46ec4fd512e3e067086d2abd4887010124f11d256e7e3c59ca8dd833fba",
+  "diagnostic/meta.json": "ec1c5707142e2348702931f7cf0eedab5aff72f354f11ebd69fc5fc37ef7400b",
+  "diagnostic/texts.jsonl": "ea9e60a514273dd0ac890160199b201b19f36852a399e3158b867b42f3defb95"
+}

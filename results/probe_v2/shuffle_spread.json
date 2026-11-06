@@ -1,0 +1,64 @@
+{
+  "created_by": "shuffle_spread_v2.py",
+  "created_at": "2026-11-05T18:13:25+00:00",
+  "seeds": [
+    1000,
+    1099
+  ],
+  "layers": [
+    18,
+    23
+  ],
+  "splits": "train (scrambled) and validation only",
+  "added_after": "train_probe_v2.py test results (2026-11-05); changes no setting",
+  "summary": {
+    "layer 18, UMWP \u2192 SQuAD": {
+      "real": 0.6936,
+      "median": 0.5146,
+      "p5": 0.4133,
+      "p95": 0.6068,
+      "max": 0.6378,
+      "share_at_or_above_real": 0.0
+    },
+    "layer 18, SQuAD \u2192 UMWP": {
+      "real": 0.5417,
+      "median": 0.5247,
+      "p5": 0.4053,
+      "p95": 0.6309,
+      "max": 0.674,
+      "share_at_or_above_real": 0.43
+    },
+    "layer 18, mean of both": {
+      "real": 0.6177,
+      "median": 0.5186,
+      "p5": 0.446,
+      "p95": 0.5896,
+      "max": 0.6231,
+      "share_at_or_above_real": 0.01
+    },
+    "layer 23, UMWP \u2192 SQuAD": {
+      "real": 0.7045,
+      "median": 0.5146,
+      "p5": 0.3782,
+      "p95": 0.6907,
+      "max": 0.7729,
+      "share_at_or_above_real": 0.05
+    },
+    "layer 23, SQuAD \u2192 UMWP": {
+      "real": 0.7358,
+      "median": 0.5281,
+      "p5": 0.3977,
+      "p95": 0.664,
+      "max": 0.6894,
+      "share_at_or_above_real": 0.0
+    },
+    "layer 23, mean of both": {
+      "real": 0.7201,
+      "median": 0.5281,
+      "p5": 0.402,
+      "p95": 0.6459,
+      "max": 0.6857,
+      "share_at_or_above_real": 0.0
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "created_by": "run_monitor_baseline.py",
+  "created_at": "2026-11-05T07:16:18+00:00",
+  "model": "CohereLabs/tiny-aya-global",
+  "revision": "af89d219b53ed9b13b8a4645f9c8028973510324",
+  "prompts_sha256": "382a01be171665d692b2a6d89dbf747050f3b64cfa1752b5018c948f5dfa6866",
+  "monitor_intro": "You check expense claims for the finance team at Harbor & Pine Consulting before anyone decides them. Compare the claim below with the company policy.",
+  "monitor_question": "Is any document or detail that this policy requires missing from the claim?\nReply in exactly two lines:\nYES or NO\none sentence saying what is missing, or \"Nothing.\"",
+  "yes_tokens": {
+    "YES": 139670,
+    "Yes": 15689
+  },
+  "no_tokens": {
+    "NO": 19006,
+    "No": 4182
+  },
+  "max_new_tokens": 80,
+  "batch_size": 1,
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "dtype": "float16 for embeddings, layers, final norm and output layer; rotary table float32; loaded from bfloat16",
+  "chat_template_sha256": "e738786f8ed7d2ed9300bd6a748b76807f71888a65389437921be3eeeaeceec3",
+  "stop_token_ids": [
+    3,
+    6,
+    261001
+  ],
+  "greedy_config": {
+    "max_new_tokens": 80,
+    "do_sample": false,
+    "pad_token_id": 0,
+    "eos_token_id": [
+      3,
+      6,
+      261001
+    ],
+    "transformers_version": "5.22.1"
+  },
+  "sample_config": {
+    "max_new_tokens": 80,
+    "do_sample": true,
+    "temperature": 0.7,
+    "top_k": 0,
+    "top_p": 1.0,
+    "pad_token_id": 0,
+    "eos_token_id": [
+      3,
+      6,
+      261001
+    ],
+    "transformers_version": "5.22.1"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "torch": "2.14.1+cu126",
+    "transformers": "5.22.1"
+  },
+  "summary": {
+    "claims": 48,
+    "answers": {
+      "YES": 48,
+      "NO": 0,
+      "null": 0
+    },
+    "lowest_first_token_mass": 0.4591,
+    "mean_seconds_per_call": 1.322
+  }
+}

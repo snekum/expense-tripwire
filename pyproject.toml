@@ -1,0 +1,29 @@
+[project]
+name = "expense-tripwire"
+version = "0.1.0"
+description = "Feasibility study: can an activation probe stop an expense-approval agent from acting on missing evidence?"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "huggingface-hub>=2.4",
+    "matplotlib>=3.10",
+    "numpy>=2",
+    "pandas>=3.1",
+    "pyarrow>=26",
+    "scikit-learn>=1.8",
+    # 2.14.1 is the newest PyTorch built for CUDA 12.6, the highest CUDA the laptop's
+    # NVIDIA driver (561.09) supports. The CUDA build also runs fine on machines without a GPU.
+    "torch==2.14.1",
+    "transformers>=5.22",
+]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
